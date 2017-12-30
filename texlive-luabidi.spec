@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-luabidi
-Version:	20131014
-Release:	9
+Version:	0.2
+Release:	1
 Summary:	TeXLive luabidi package
 Group:		Publishing
 URL:		http://tug.org/texlive

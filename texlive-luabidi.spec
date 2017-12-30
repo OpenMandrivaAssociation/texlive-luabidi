@@ -5,7 +5,7 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-luabidi
-Version:	0.2
+Version:	20170414
 Release:	1
 Summary:	TeXLive luabidi package
 Group:		Publishing

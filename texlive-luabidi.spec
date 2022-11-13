@@ -1,18 +1,12 @@
-# revision 30790
-# category Package
-# catalog-ctan undef
-# catalog-date undef
-# catalog-license undef
-# catalog-version undef
 Name:		texlive-luabidi
-Version:	0.2
-Release:	2
+Version:	54512
+Release:	1
 Summary:	TeXLive luabidi package
 Group:		Publishing
 URL:		http://tug.org/texlive
 License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luabidi.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luabidi.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luabidi.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luabidi.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -22,25 +16,21 @@ Requires(post):	texlive-kpathsea
 TeXLive luabidi package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/lualatex/luabidi/arabmaths.tex
-%{_texmfdistdir}/tex/lualatex/luabidi/autofootnoterule.tex
-%{_texmfdistdir}/tex/lualatex/luabidi/luabidi.sty
-%{_texmfdistdir}/tex/lualatex/luabidi/textwidthfootnoterule.tex
-%doc %{_texmfdistdir}/doc/lualatex/luabidi/README
-%doc %{_texmfdistdir}/doc/lualatex/luabidi/test.tex
+%{_texmfdistdir}/tex/lualatex/luabidi
+%doc %{_texmfdistdir}/doc/lualatex/luabidi
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 

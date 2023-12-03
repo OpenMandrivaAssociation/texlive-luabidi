@@ -1,6 +1,6 @@
 Name:		texlive-luabidi
-Version:	54512
-Release:	2
+Version:	68432
+Release:	1
 Summary:	TeXLive luabidi package
 Group:		Publishing
 URL:		http://tug.org/texlive
